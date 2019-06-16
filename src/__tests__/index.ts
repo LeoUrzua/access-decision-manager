@@ -1,8 +1,10 @@
+import { randomFunction } from "../index";
+
 describe('index', () => {
     it('dummy test to allow test ci', async () => {
-        const trueValue = true
+        const trueValue = true;
 
-        expect(trueValue).toBe(trueValue);
+        expect(randomFunction()).toEqual(trueValue);
 
     });
 });
