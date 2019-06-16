@@ -7,8 +7,17 @@ module.exports = {
     'prettier',
     'prettier/@typescript-eslint',
   ],
+  overrides: [
+    {
+      files: ['*.test.ts'],
+      rules: {
+        '@typescript-eslint/explicit-function-return-type': 'off',
+      },
+    },
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
+    sourceType: 'module',
     project: './tsconfig.json',
   },
   plugins: ['jest', 'prettier'],
