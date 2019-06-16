@@ -1,3 +1,3 @@
-const randomFunction = () => true;
+const randomFunction = (): boolean => true;
 
-export { randomFunction }
+export default randomFunction;
