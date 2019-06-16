@@ -4,6 +4,30 @@
     "url": "https://github.com/LeoUrzua/access-decision-manager/issues"
   },
   "description": "Add authorization",
+  "devDependencies": {
+    "@types/jest": "24.0.14",
+    "@typescript-eslint/eslint-plugin": "1.10.2",
+    "@typescript-eslint/parser": "1.10.2",
+    "eslint": "5.16.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-config-prettier": "5.0.0",
+    "eslint-import-resolver-typescript": "1.1.1",
+    "eslint-plugin-import": "2.17.3",
+    "eslint-plugin-jest": "22.6.4",
+    "eslint-plugin-node": "9.1.0",
+    "eslint-plugin-prettier": "3.1.0",
+    "husky": "2.4.1",
+    "jest": "24.8.0",
+    "lint-staged": "8.2.1",
+    "prettier": "1.18.2",
+    "ts-jest": "24.0.2",
+    "ts-node": "8.3.0",
+    "typescript": "3.5.2"
+  },
+  "engines": {
+    "node": "10.14.1 - 11.x",
+    "npm": "^6.8.0"
+  },
   "homepage": "https://github.com/LeoUrzua/access-decision-manager#readme",
   "keywords": [
     "ADM",
@@ -11,14 +35,23 @@
     "voters"
   ],
   "license": "MIT",
-  "main": "src/index.ts",
+  "lint-staged": {
+    "*.{css,js,json,md,ts,yaml,yml}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js,ts}": "eslint --max-warnings=0 --ignore-pattern '!.eslintrc.js' --ignore-pattern '!.prettierrc.js'"
+  },
+  "main": "dist/index.js",
   "name": "access-decision-manager",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LeoUrzua/access-decision-manager.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf dist; tsc",
+    "lint": "eslint . --max-warnings=0 --ext .js,.ts --ignore-path .gitignore --ignore-pattern '!.eslintrc.js' --ignore-pattern '!.prettierrc.js'",
+    "test": "jest"
   },
   "version": "1.0.0"
 }
