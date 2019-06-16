@@ -1,3 +1,1 @@
-const randomFunction = (): boolean => true;
-
-export default randomFunction;
+export * from './access-decision-manager';
