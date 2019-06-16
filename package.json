@@ -59,7 +59,7 @@
     "commit": "git-cz",
     "build": "rm -rf dist; tsc",
     "lint": "eslint . --max-warnings=0 --ext .js,.ts --ignore-path .gitignore --ignore-pattern '!.eslintrc.js' --ignore-pattern '!.prettierrc.js'",
-    "test": "jest",
+    "test": "jest && codecov",
     "semantic-release": "semantic-release"
   },
   "version": "0.0.0-development"
