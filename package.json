@@ -20,6 +20,7 @@
     "jest": "24.8.0",
     "lint-staged": "8.2.1",
     "prettier": "1.18.2",
+    "semantic-release": "15.13.16",
     "ts-jest": "24.0.2",
     "ts-node": "8.3.0",
     "typescript": "3.5.2"
@@ -46,12 +47,13 @@
   "name": "access-decision-manager",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LeoUrzua/access-decision-manager.git"
+    "url": "https://github.com/LeoUrzua/access-decision-manager.git"
   },
   "scripts": {
     "build": "rm -rf dist; tsc",
     "lint": "eslint . --max-warnings=0 --ext .js,.ts --ignore-path .gitignore --ignore-pattern '!.eslintrc.js' --ignore-pattern '!.prettierrc.js'",
-    "test": "jest"
+    "test": "jest",
+    "semantic-release": "semantic-release"
   },
-  "version": "1.0.0"
+  "version": "0.0.0-development"
 }
