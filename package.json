@@ -45,6 +45,9 @@
     "node": "10.14.1 - 11.x",
     "npm": "6.8.0"
   },
+  "files": [
+    "dist/**/*"
+  ],
   "homepage": "https://github.com/LeoUrzua/access-decision-manager#readme",
   "husky": {
     "hooks": {
